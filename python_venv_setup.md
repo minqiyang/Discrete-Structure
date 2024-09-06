@@ -17,3 +17,4 @@ C:\> <venv directory>\Scripts\activate.bat   ### e.g. c:\>myenv1\Scripts\activat
 ### exit virtual env:
 deactivate
 ```
+After venv activated,you can install python packages in this venv by pip.

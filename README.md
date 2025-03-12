@@ -9,3 +9,6 @@ Here are some key areas within discrete mathematics:
 * Algorithms and Complexity: This area deals with the design and analysis of algorithms, as well as the study of computational complexity, which classifies problems based on their inherent difficulty.
 * Discrete Probability: This involves the study of probability where the set of possible outcomes is discrete. It includes topics like probability distributions, expected value, and variance.  
 Discrete mathematics is foundational for computer science, as it provides the mathematical underpinnings for data structures, algorithms, and cryptography
+
+
+https://github.com/d2l-ai  

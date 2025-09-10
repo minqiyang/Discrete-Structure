@@ -44,9 +44,9 @@ On Git Bash for Windows, the primary file is usually ~/.bashrc (located in your 
 R --version
 ```
 如果R已经安装 但Shell又无法找到R的执行文件， 通常是R的执行文件路径没有加入到Bash的环境变量PATH。
-···
+```bash
 export PATH="/c/Program Files/R/R-x.x.x/bin:$PATH"
-···
+```
 
 或将R的执行路径加入到bash的profile中。
 

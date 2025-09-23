@@ -35,7 +35,8 @@ Each matrix encodes a different relationship (there are a total of 10) described
 <img width="1527" height="418" alt="image" src="https://github.com/user-attachments/assets/a269cedf-5198-47cd-b405-ded0a52b7a83" />
 18x18 matrices are basically adjacency matrices.
 
-## igraph plot.
+## Part 1
+### igraph plot.
 
 * Description
 plot.igraph() is able to plot graphs to any R device. It is the non-interactive companion of the tkplot() function.
@@ -82,13 +83,13 @@ plot(g_samplik, vertex.label = V(g_samplik)$name)
 <img width="771" height="648" alt="image" src="https://github.com/user-attachments/assets/eca0717e-b6df-49a4-8a2b-394562cbad1a" />
 
 
-## networkD3 forceNetwork
+### networkD3 forceNetwork
 
-### Description
+* Description
 
 Create a D3 JavaScript force directed network graph.
 
-### Usage
+* Usage
 
 Key arguments:
 

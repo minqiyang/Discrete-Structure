@@ -95,6 +95,6 @@ plot(g_samplik, vertex.label = V(g_samplik)$name)
 
 
 ## Open Questions:
-Adjacency matrics.
-group dynamics
+   
+group dynamics    
 group conflict

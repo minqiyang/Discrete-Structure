@@ -82,6 +82,102 @@ plot(g_samplik, vertex.label = V(g_samplik)$name)
 <img width="771" height="648" alt="image" src="https://github.com/user-attachments/assets/eca0717e-b6df-49a4-8a2b-394562cbad1a" />
 
 
+## networkD3 forceNetwork
+
+### Description
+
+Create a D3 JavaScript force directed network graph.
+
+### Usage
+
+Key arguments:
+
+forceNetwork(
+  Links,
+  Nodes,
+  Source,
+  Target,
+  Value,
+  NodeID,
+  Nodesize,
+  Group,
+...
+)
+Arguments
+Links	
+a data frame object with the links between the nodes. It should include the Source and Target for each link. These should be numbered starting from 0. An optional Value variable can be included to specify how close the nodes are to one another.
+
+Nodes	
+a data frame containing the node id and properties of the nodes. If no ID is specified then the nodes must be in the same order as the Source variable column in the Links data frame. Currently only a grouping variable is allowed.
+
+Source	
+character string naming the network source variable in the Links data frame.
+
+Target	
+character string naming the network target variable in the Links data frame.
+
+Value	
+character string naming the variable in the Links data frame for how wide the links are.
+
+NodeID	
+character string specifying the node IDs in the Nodes data frame.
+
+Nodesize	
+character string specifying the a column in the Nodes data frame with some value to vary the node radius's with. See also radiusCalculation.
+
+Group	
+character string specifying the group of each node in the Nodes data frame.
+
+...
+
+
+```
+library("lda")
+library("networkD3")
+
+
+# load samplik data
+
+data("sampson")
+
+samplik <- sampson$SAMPLK1
+
+#nodes <- data.frame( name = dimnnames(samplik)[[1]])
+
+#Create nodes from adjacency matrix
+nodes <- data.frame(name = rownames(samplik))
+
+#Create links from adjacency matrix
+links <- data.frame(source = integer(), target = integer(), value = numeric())
+
+for(i in 1:nrow(samplik)){
+  for (j in 1:ncol(samplik)){
+    if (samplik[i,j] > 0){
+      links <- rbind(links, data.frame(source=i-1, target=j-1, value = samplik[i,j]))
+    }
+  }
+}
+
+
+forceNetwork(
+  Links = links,
+  Nodes = nodes,
+  Source = "source",
+  Target = "target",
+  Value = "value",
+  NodeID = "name",
+  Group = "name",
+  opacity = 0.9,
+  linkDistance = 100,        # Distance between nodes
+  charge = -200,             # Repulsion force (negative = stronger repulsion)
+  fontSize = 14,             # Font size for labels
+  colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),  # Custom color scale
+  zoom = TRUE                # Enable zooming
+)
+
+```
+
+<img width="705" height="588" alt="image" src="https://github.com/user-attachments/assets/838166c2-edee-47dd-a2b8-b13ce130a492" />
 
 
 

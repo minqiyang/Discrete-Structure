@@ -160,7 +160,7 @@ for(i in 1:nrow(samplik)){
 }
 
 
-forceNetwork(
+plot <-forceNetwork(
   Links = links,
   Nodes = nodes,
   Source = "source",
@@ -175,7 +175,7 @@ forceNetwork(
   colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),  # Custom color scale
   zoom = TRUE                # Enable zooming
 )
-
+print(plot)
 ```
 
 <img width="705" height="588" alt="image" src="https://github.com/user-attachments/assets/838166c2-edee-47dd-a2b8-b13ce130a492" />

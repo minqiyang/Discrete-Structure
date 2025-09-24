@@ -250,6 +250,9 @@ AMBROSE_9    JOHN_1    GREG_2   HUGH_14  LOUIS_11 ALBERT_16  AMAND_13    MARK_7 
         2         2         2         2         3         3         3         4         4         4         5         6         6         8        12        13 
   BERTH_6  ROMUL_10 
        14        18 
+```
+<img width="845" height="627" alt="image" src="https://github.com/user-attachments/assets/37a28f51-fe54-407a-96b8-dc0850fc172c" />
+
 
 
 
